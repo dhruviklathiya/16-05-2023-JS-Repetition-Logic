@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <script>
+        let data = [];
+        let ans = 1;
+        for(let i=0;i<6;i++)
+        {
+            data.push(" "+ans);
+            ans *= 2;
+            // if data.push written after ans*= 2; then on index[0] value will be 2 :::: solution : data.unshift(1);
+            //                                                                      :::: solution 2: let data = [1]
+        }
+        document.getElementById('info').innerHTML = data;
+        document.getElementById('info').style.color = "Green";
+    </script>
+</body>
+</html>

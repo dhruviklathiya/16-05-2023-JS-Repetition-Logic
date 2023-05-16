@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power & base</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <form action="">
+        <label for="">Base value:</label>
+        <input type="text" placeholder="Enter value" id="base"/>
+        <label for="">Power value:</label>
+        <input type="text" placeholder="Enter value" id="power"/>
+        <button onclick="getResult()" type="button">Click here to get result</button>
+    </form>
+    <h2 id="info2"></h2>
+    <script>
+        let aa = 2;
+        let i = 0;
+        let ans = 1;
+        while(i<8)
+        {
+            ans *= aa;
+            i++;
+        }
+        let supertext = "8"; // Must have to be in string otherwise error []
+        document.getElementById('info').innerHTML = "Answer for 2"+ supertext.sup() + " is: " + ans;
+        document.getElementById('info').style.color = "Green";
+        function getResult(){
+            let aa = document.getElementById('base').value;
+            let bb = document.getElementById('power').value;
+            let ans = 1;
+            let i = 0
+            if(isNaN(aa) || isNaN(bb))
+            {
+                document.getElementById('info2').innerHTML = "PLEASE ENTER VALID NUMBER.";
+                document.getElementById('info2').style.color = 'red';
+            }
+            else
+            {
+                while(i<bb){
+                    ans *= aa;
+                    i++;
+                }
+                document.getElementById('info2').innerHTML = "Final answer for manually entered value is: " + ans;
+                document.getElementById('info2').style.color = "Green";
+            }
+        }
+    </script>
+</body>
+</html>

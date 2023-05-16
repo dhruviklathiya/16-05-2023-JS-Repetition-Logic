@@ -1,0 +1,7 @@
+Write a JavaScript program using any two type of loop.
+
+
+Give sum of 10 numbers.
+Multiplication table.
+Give 2^8.
+Give sequence 1, 2, 4, 8, 16, 32.
